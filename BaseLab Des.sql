@@ -22,6 +22,7 @@ UPDATE Video
 SET titulo='Prueba41'
 WHERE idVideo=5;
 
+--STORE PROCEDURE CREAR VIDEO
 CREATE PROCEDURE spCrearVideo
 	@idVideo int,
 	@titulo varchar(60),
@@ -35,6 +36,32 @@ BEGIN
 END
 
 EXECUTE spCrearVideo 10, 'video', 12, 'x', 'y'
+
+--STORE PROCEDURE ACTUALIZAR VIDEO
+CREATE PROCEDURE spActualizarVideo
+@idVideo int,
+@titulo varchar(60),
+@reproducciones int,
+@url varchar(100),
+@creador varchar(60)
+AS
+BEGIN
+	UPDATE Video
+	SET titulo=@titulo, reproducciones=@reproducciones, url=@url, creador=@creador
+	WHERE idVideo=@idVideo
+END
+
+
+EXECUTE spActualizarVideo 5, 'PruebaActualizar', 12345, 'www.youtube.com/Actualizar', 'Noel';
+
+CREATE PROCEDURE spEliminarVideo
+@idVideo int
+AS
+BEGIN
+	DELETE FROM Video
+	WHERE idVideo=@idVideo
+END
+
 
 delete from Video
 WHERE idVideo=10;

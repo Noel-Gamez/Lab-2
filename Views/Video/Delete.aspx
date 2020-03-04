@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Pagina Principal</title>
+    <title>Eliminar</title>
+
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 
   <meta charset="UTF-8">
   <meta name="description" content="CRUD Video ASP.NET MVC 2.0">
@@ -13,14 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>MENU DE OPCIONES:
-    </h1>
-    <a href="/Video/Create">Agregar</a>
-    <br />
-    <a href="/Video/Edit">Modificar</a>
-    <br />
-    <a href="/Video/Delete">Eliminar</a>
-    <br />
-    <a href="/Video/Index">Consultar Todo</a>
+    <form action="/Video/Delete" method="post">
+    <fieldset>
+    <legend>Eliminar Video</legend>
+    <label>idVideo</label>
+        <input type="text" name="idVideo"/>
+
+        <input type="submit" value="Eliminar" />
+    </fieldset>
+    </form>
 </body>
 </html>
