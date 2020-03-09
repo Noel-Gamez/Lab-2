@@ -24,5 +24,6 @@
         <input type="submit" value="Eliminar" />
     </fieldset>
     </form>
+        <a href="/Home/Index">Volver a Inicio</a>
 </body>
 </html>

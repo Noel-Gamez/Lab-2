@@ -21,6 +21,6 @@
     <br />
     <a href="/Video/Delete">Eliminar</a>
     <br />
-    <a href="/Video/Index">Consultar Todo</a>
+    <a href="/Video/Select">Consultar Todo</a>
 </body>
 </html>

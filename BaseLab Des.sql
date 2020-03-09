@@ -1,3 +1,5 @@
+CREATE DATABASE EjemploDes;
+
 CREATE TABLE Video(
 idVideo int NOT NULL,
 titulo varchar(60) NOT NULL,
@@ -6,6 +8,8 @@ url varchar(100) NOT NULL,
 creador varchar(60) NOT NULL,
 CONSTRAINT PK_VideoidVideo PRIMARY KEY(idVideo)
 );
+
+drop table Video;
 
 SELECT * FROM Video;
 
@@ -62,9 +66,29 @@ BEGIN
 	WHERE idVideo=@idVideo
 END
 
+EXECUTE spEliminarVideo 10;
 
 delete from Video
 WHERE idVideo=10;
 
-drop table Video;
 
+
+CREATE PROCEDURE spMostrarVideo
+AS
+BEGIN
+	SELECT * FROM Video
+END
+
+EXECUTE spMostrarVideo ;
+
+DROP PROCEDURE spMostrarVideo;
+
+DELETE FROM Video
+WHERE idVideo=7;
+
+SELECT * FROM Video;
+
+DELETE FROM Video;
+
+INSERT INTO Video
+VALUES(10, 'X', 4654, 'Y', 'NOEL');

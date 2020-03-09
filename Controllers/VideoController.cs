@@ -78,5 +78,10 @@ namespace MVCLaboratorio.Controllers
             return RedirectToAction("Index", "Video");
         }
 
+        public ActionResult Select()
+        {
+            ViewData["Video"] = BaseHelper.ejecutarConsulta("spMostrarVideo", CommandType.StoredProcedure);
+            return View();
+        }
     }
 }

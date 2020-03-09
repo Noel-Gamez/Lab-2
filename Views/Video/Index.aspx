@@ -16,5 +16,6 @@
     <h1>Proceso exitoso!
     </h1>
     <iframe src="https://giphy.com/embed/mgqefqwSbToPe" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-joke-advice-mgqefqwSbToPe"></a></p>
+    <a href="/Home/Index">Volver a Inicio</a>
 </body>
 </html>

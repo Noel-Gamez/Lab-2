@@ -32,5 +32,6 @@
         <input type="submit"value="Registrar" />
     </fieldset>
     </form>
+    <a href="/Home/Index">Volver a Inicio</a>
 </body>
 </html>
